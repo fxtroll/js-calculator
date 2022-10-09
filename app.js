@@ -23,7 +23,8 @@ let calculator = {
   },
   root: function (a, b = this.memory.pop()) {
     this.memory.push(a ** (1 / b))
-    return a ** (1 / b)
+    let result = Math.ceil(a ** (1 / b))
+    return result
   },
   log: function (a) {
     return Math.log(a)
@@ -34,6 +35,10 @@ let calculator = {
 
   clear: function () {
     this.memory.splice(0, this.memory.length)
+    console.log('memory has been cleared')
+    if (this.memory.length === 0)
+      return true
+    return false
   },
 
   stringOfOperations: function (a) {
@@ -43,7 +48,5 @@ let calculator = {
 
 }
 
-console.log(calculator.add(1, 5))
-console.log(calculator.memory)
-console.log(calculator.clear())
-console.log(calculator.memory)
+module.exports = calculator;
+

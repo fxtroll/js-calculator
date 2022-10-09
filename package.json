@@ -4,7 +4,7 @@
   "description": "calculator made in javascript",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "javascript",
@@ -13,6 +13,7 @@
   "author": "David White-Goode <dwhitegoode@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.1.2",
     "nodemon": "^2.0.20"
   }
 }
